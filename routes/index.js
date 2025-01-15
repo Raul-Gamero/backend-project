@@ -18,4 +18,5 @@ router.get('/', isAuthenticated, function (req, res) {
   res.render('index', { title: 'Express project template' });
 });
 
+
 module.exports = router;

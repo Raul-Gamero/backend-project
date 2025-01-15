@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@prisma/client": "^6.0.1",
+    "@prisma/client": "^6.2.1",
     "bcrypt": "^5.1.1",
     "cloudinary": "^1.41.1",
     "connect-flash": "^0.1.1",
@@ -32,6 +32,12 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "prisma": "^6.2.1",
     "supertest": "^6.3.3"
-  }
+  },
+  "description": "- Usar *Express* para la configuración del servidor.\r - Implementar *Prisma ORM* para la gestión de base de datos.\r - Utilizar *Handlebars* como motor de plantillas para el frontend del servidor.\r - Crear al menos *2 modelos de datos* relacionados entre sí. Ejemplo:\r   - Modelo User (usuarios).\r   - Modelo Post (publicaciones), relacionado con el modelo User.",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

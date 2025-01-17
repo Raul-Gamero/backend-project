@@ -22,11 +22,7 @@ node_modules
 *.tar
 *.zip
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+
 
 # OS generated files #
 ######################

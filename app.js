@@ -11,6 +11,9 @@ const passport = require('passport');
 const pgSession = require('connect-pg-simple')(session);
 const { Pool } = require('pg');
 
+
+
+
 const swaggerDocs = require('./config/swagger').swaggerDocs;
 const swaggerUi = require('./config/swagger').swaggerUi;
 
@@ -83,6 +86,12 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+//Render Start
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
+//Render End
 
 module.exports = app;
 

@@ -13,34 +13,65 @@ a {
   color: #00B7FF;
 }
 /*INDEX-HBS*/
-.index-tittle {
-  margin: 0 0 20px 0;
-  padding: 0;
-  color: #20d3eb;
+.index-intro-text, .index-title, .index-discover, .index-description, .index-mission {
+  text-align: center;
+  color: #2c3e50;
 }
-.red {
-  margin: 0 0 20px 0;
-  padding: 0;
-  color: #FF4136;
+
+.index-title {
+  font-size: 2rem;
+  font-weight: bold;
 }
-.blue {
-  margin: 0 0 20px 0;
+
+.red, .blue {
+  color: #3498db; /* Adjust the color to fit your design */
+}
+
+.index-services-title {
+  text-align: center;
+  color: #2980b9;
+}
+
+.index-services-list {
+  list-style: none;
   padding: 0;
-  color: #0074D9;
+}
+
+.index-service strong {
+  font-size: 1.25rem;
+}
+
+.index-service-details {
+  margin: 10px 0 20px 0;
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+.index-unique-features {
+  text-align: center;
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.index-feature-number {
+  font-size: 1.5rem;
+  color: #e74c3c;
+}
+
+.index-feature-title {
+  font-size: 1.2rem;
+  color: #34495e;
+}
+
+.index-feature-content {
+  margin: 10px;
+}
+
+.index-feature-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
 }
 /*INDEX-HBS*/
 
-ul {
-  list-style-type: none; /* Elimina los bullets predeterminados de la lista */
-  padding: 0;
-}
-
-ul li strong {
-  font-size: 18px; /* Hace los subtítulos de las listas más grandes */
-  color: #333;
-}
-
-ul li ul {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}

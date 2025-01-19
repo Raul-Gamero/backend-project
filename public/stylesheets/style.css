@@ -16,22 +16,31 @@ a {
 .index-tittle {
   margin: 0 0 20px 0;
   padding: 0;
-  font-size: 24px;
-  font-weight: normal;
   color: #20d3eb;
 }
 .red {
   margin: 0 0 20px 0;
   padding: 0;
-  font-size: 24px;
-  font-weight: normal;
-  color: #eb202a;
+  color: #FF4136;
 }
 .blue {
   margin: 0 0 20px 0;
   padding: 0;
-  font-size: 24px;
-  font-weight: normal;
-  color: #211de7;
+  color: #0074D9;
 }
 /*INDEX-HBS*/
+
+ul {
+  list-style-type: none; /* Elimina los bullets predeterminados de la lista */
+  padding: 0;
+}
+
+ul li strong {
+  font-size: 18px; /* Hace los subtítulos de las listas más grandes */
+  color: #333;
+}
+
+ul li ul {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}

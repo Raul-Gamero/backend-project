@@ -12,8 +12,8 @@ router.get('/profile', (req, res) => {
 
   res.render('profile', { email })
 })
-
-router.get('/', isAuthenticated, function (req, res) {
+//test the middleware
+router.get('/*', isAuthenticated, function (req, res) {
   console.log(req.session)
   res.render('index', { title: 'Express project template' });
 });

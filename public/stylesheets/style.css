@@ -13,6 +13,36 @@ a {
   color: #00B7FF;
 }
 /*INDEX-HBS*/
+.index-navbar {
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.index-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.index-nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.index-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.index-nav-links a:hover {
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
 .index-intro-text, .index-title, .index-discover, .index-description, .index-mission {
   text-align: center;
   color: #2c3e50;

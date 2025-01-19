@@ -1,3 +1,14 @@
+<nav class="index-navbar">
+    <ul class="index-nav-links">
+        <li><a href="/">Home</a></li>
+        {{#if (eq user.role 'ADMIN')}}
+            <li><a href="/admin">Admin</a></li>
+        {{else}}
+            <li><a href="/profile">{{toUpperCase user.name}}</a></li>
+            <li><a href="/courses">Courses</a></li>
+        {{/if}}
+    </ul>
+</nav>
 <div class="index-intro">
     <p class="index-intro-text">Experience French Excellence Here</p>
     <h1 class="index-title">{{title}}</h1>

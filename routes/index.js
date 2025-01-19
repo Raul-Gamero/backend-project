@@ -15,7 +15,7 @@ router.get('/profile', (req, res) => {
 //test the middleware
 router.get('/*', isAuthenticated, function (req, res) {
   console.log(req.session)
-  res.render('index', { title: 'Express project template' });
+  res.render('index', { title: 'Welcome to French Voyage Akademie' });
 });
 
 

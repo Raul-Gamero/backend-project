@@ -1,12 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*background start*/
+  background-image: url('img/background.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  /*background end*/ 
 }
 
 a {
   color: #00B7FF;
 }
 
-body {
-  background-image: url('img/background1.jpeg');
-}

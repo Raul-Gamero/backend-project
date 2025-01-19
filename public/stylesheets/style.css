@@ -12,7 +12,7 @@ body {
 a {
   color: #00B7FF;
 }
-
+/*INDEX-HBS*/
 .index-tittle {
   margin: 0 0 20px 0;
   padding: 0;
@@ -20,3 +20,18 @@ a {
   font-weight: normal;
   color: #20d3eb;
 }
+.red {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: normal;
+  color: #eb202a;
+}
+.blue {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: normal;
+  color: #211de7;
+}
+/*INDEX-HBS*/

@@ -59,6 +59,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false })); //Preguntar si hay que cambiar a true
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//ading index.hbs
+app.use(express.static('public'));
+//ading index.hbs
 app.use(flash());
 app.use(methodOverride('_method'));
 app.use(passport.initialize());

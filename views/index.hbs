@@ -1,11 +1,11 @@
 <nav class="index-navbar">
     <ul class="index-nav-links">
         <li><a href="/">Home</a></li>
-        {{#if eq user.role 'ADMIN'}}
-            <li><a href="/admin">Profile</a></li>
+        {{#eq user.role 'ADMIN' }}
+            <li><a href="/admin">Admin</a></li>
         {{else}}
-            <li><a href="/profile">Login</a></li>
-        {{/if}}
+            <li><a href="/profile">Profile</a></li>
+        {{/eq}}
     </ul>
 </nav>
 <div class="index-intro">

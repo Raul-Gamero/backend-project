@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #1aade7;
 }
 /*INDEX-HBS*/
 .index-navbar {
@@ -39,13 +39,13 @@ a {
 }
 
 .index-nav-links a:hover {
-  color: #3498db;
+  color: #d31717;
   transition: color 0.3s ease;
 }
 
 .index-intro-text, .index-title, .index-discover, .index-description, .index-mission {
   text-align: center;
-  color: #2c3e50;
+  color: #3d0842;
 }
 
 .index-title {
@@ -54,12 +54,12 @@ a {
 }
 
 .red, .blue {
-  color: #3498db; /* Adjust the color to fit your design */
+  color: #286e17; /* Adjust the color to fit your design */
 }
 
 .index-services-title {
   text-align: center;
-  color: #2980b9;
+  color: #218b26;
 }
 
 .index-services-list {
@@ -85,12 +85,12 @@ a {
 
 .index-feature-number {
   font-size: 1.5rem;
-  color: #e74c3c;
+  color: #22b2eb;
 }
 
 .index-feature-title {
   font-size: 1.2rem;
-  color: #34495e;
+  color: #5211bb;
 }
 
 .index-feature-content {

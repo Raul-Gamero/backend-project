@@ -105,3 +105,14 @@ a {
 }
 /*INDEX-HBS*/
 
+/*Register-HBS & Login-HBS*/
+label {
+  color: blue;
+}
+
+.blue {
+  color: blue;
+}
+/*Register-HBS*/
+
+

@@ -1,5 +1,17 @@
-<h1>Signup</h1>
+<h1 class="blue">Signup</h1>
 <form action="/auth/register" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="name" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="phone" id="phone" name="phone" required>
+    </div>
+    <div>
+        <label for="course">Course:</label>
+        <input type="course" id="course" name="course" required>
+    </div>
     <div>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
@@ -10,7 +22,7 @@
     </div>
     <button type="submit">Register</button>
 </form>
-<p>Do you already have an account? <a href="/auth/login-page">Log in here</a></p>
+<p class="blue"><strong>Do you already have an account?</strong> <a href="/auth/login-page"><strong>Log in here</strong></a></p>
 
 
 <section class="index-unique-features">
@@ -20,7 +32,6 @@
         <div class="index-feature-content">
             <h3 class="index-feature-title">Interactive Virtual Lessons</h3>
             <p>Engage in immersive learning with cutting-edge technology.</p>
-            <img src="../public/img/1.jpeg" alt="Interactive Virtual Lessons" class="index-feature-image" style="width: 300px; height: 260px;">
         </div>
     </div>
     <div class="index-feature">
@@ -28,7 +39,6 @@
         <div class="index-feature-content">
             <h3 class="index-feature-title">Expert Language Instructors</h3>
             <p>Receive personalized guidance from seasoned language professionals.</p>
-            <img src="../public/img/2.jpeg" alt="Expert Language Instructors" class="index-feature-image" style="width: 300px; height: 260px;">
         </div>
     </div>
     <div class="index-feature">
@@ -36,7 +46,6 @@
         <div class="index-feature-content">
             <h3 class="index-feature-title">Cultural Enrichment Emphasis</h3>
             <p>Experience French culture alongside language proficiency.</p>
-            <img src="../public/img/3.jpeg" alt="Cultural Enrichment" class="index-feature-image" style="width: 300px; height: 260px;">
         </div>
     </div>
 </section>

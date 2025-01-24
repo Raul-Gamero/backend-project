@@ -41,6 +41,8 @@ router.post("/register", async (req, res) => {
       data: {
         email: req.body.email,
         password: hashedPassword,
+        phone: req.body.phone,
+        course: req.body.course,
       },
     });
     res.redirect("/auth/login-page");

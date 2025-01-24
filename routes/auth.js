@@ -43,6 +43,7 @@ router.post("/register", async (req, res) => {
         password: hashedPassword,
         phone: req.body.phone,
         course: req.body.course,
+        name: req.body.name,
       },
     });
     res.redirect("/auth/login-page");

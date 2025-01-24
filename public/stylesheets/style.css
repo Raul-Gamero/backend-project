@@ -116,3 +116,27 @@ label {
 /*Register-HBS*/
 
 
+/*PROFILE-HBS*/
+/* Profile Container Styles */
+.profile-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Profile Title Styles */
+.profile-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Profile Styles */
+.profile p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+/*PROFILE-HBS*/

@@ -15,6 +15,11 @@
         <p><strong>Email:</strong> {{this.email}}</p>
         <p><strong>Phone:</strong> {{this.phone}}</p>
         <p><strong>Course:</strong> {{this.course}}</p>
+        <!-- Add a form to delete the user -->
+        <form action="/admin/delete/{{this.id}}" method="POST" style="display:inline;">
+            <button type="submit" class="delete-button">Delete</button>
+        </form>
+    </div>
     {{/each}}
 </div>
         

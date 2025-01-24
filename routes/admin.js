@@ -8,4 +8,18 @@ router.get('/', async (req, res) => {
   res.render('admin', { users });
 });
 
+// Delete user
+router.post('/delete/:id', async (req, res) => {
+  try {
+    const userId = req.params.id;
+    await prisma.user.delete({
+      where: { id: userId },
+    });
+    res.redirect('/admin');
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 module.exports = router;

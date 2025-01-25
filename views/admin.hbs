@@ -19,7 +19,11 @@
         <form action="/admin/delete/{{this.id}}" method="POST" style="display:inline;">
             <button type="submit" class="delete-button">Delete</button>
         </form>
+        <form action="/admin/update/{{this.id}}" method="POST" style="display:inline;">
+            <button type="submit" class="update-button">Update</button>
+        </form>
     </div>
+
     {{/each}}
 </div>
         

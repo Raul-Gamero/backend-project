@@ -165,3 +165,23 @@ label {
   margin: 5px 0;
 }
 /*ADMIN-HBS*/
+
+
+/* Update Button Styles */
+.update-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.update-button:hover {
+  background-color: #45a049;
+}

@@ -22,4 +22,21 @@ router.post('/delete/:id', async (req, res) => {
   }
 });
 
+// Update user
+
+router.post('/update/:id', async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const { name, email, phone, course } = req.body;
+    await prisma.user.update({
+      where: { id: userId },
+      data: { name, email, phone, course },
+    });
+    res.redirect('/admin');
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 module.exports = router;

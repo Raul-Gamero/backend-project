@@ -19,11 +19,16 @@
         <form action="/admin/delete/{{this.id}}" method="POST" style="display:inline;">
             <button type="submit" class="delete-button">Delete</button>
         </form>
-        <form action="/admin/update/{{this.id}}" method="POST" style="display:inline;">
-            <button type="submit" class="update-button">Update</button>
+        <!-- Add a form to update the user -->
+        <button onclick="document.getElementById('update-form-{{this.id}}').style.display='block'" class="update-button">Update</button>
+        <form id="update-form-{{this.id}}" action="/admin/update/{{this.id}}" method="POST" style="display:none;">
+            <input type="text" name="name" placeholder="Name" value="{{this.name}}" required>
+            <input type="email" name="email" placeholder="Email" value="{{this.email}}" required>
+            <input type="text" name="phone" placeholder="Phone" value="{{this.phone}}" required>
+            <input type="text" name="course" placeholder="Course" value="{{this.course}}" required>
+            <button type="submit" class="save-button">Save</button>
         </form>
     </div>
-
     {{/each}}
 </div>
         

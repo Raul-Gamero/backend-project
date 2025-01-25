@@ -42,9 +42,10 @@ router.post('/update/:id', async (req, res) => {
 //Create user
 router.post('/create', async (req, res) => {
   try {
-    const { name, email, phone, course } = req.body;
+    const { name, email, password, phone, course } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
     await prisma.user.create({
-      data: { name, email, phone, course },
+      data: { name, email, password: hashedPassword, phone, course },
     });
     res.redirect('/admin');
   } catch (error) {

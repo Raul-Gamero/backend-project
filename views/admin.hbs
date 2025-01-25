@@ -8,6 +8,16 @@
 
 <h1>Management</h1>
 
+<!-- Add a form to create a new user -->
+<button onclick="document.getElementById('create-form').style.display='block'" class="create-button">Create New User</button>
+<form id="create-form" action="/admin/create" method="POST" style="display:none;">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone" required>
+    <input type="text" name="course" placeholder="Course" required>
+    <button type="submit" class="save-button">Save</button>
+</form>
+
 <div class="users-information">
     {{#each users}}
     <div class="user">

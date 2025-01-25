@@ -39,4 +39,20 @@ router.post('/update/:id', async (req, res) => {
   }
 });
 
+//Create user
+router.post('/create', async (req, res) => {
+  try {
+    const { name, email, phone, course } = req.body;
+    await prisma.user.create({
+      data: { name, email, phone, course },
+    });
+    res.redirect('/admin');
+  } catch (error) {
+    console.error('Error creating user:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+
 module.exports = router;

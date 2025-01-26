@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   res.render('admin', { users });
 });
 
-// Delete user
+
 router.post('/delete/:id', async (req, res) => {
   try {
     const userId = req.params.id;
@@ -21,9 +21,6 @@ router.post('/delete/:id', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
-// Update user
-
 router.post('/update/:id', async (req, res) => {
   try {
     const userId = req.params.id;
@@ -38,8 +35,6 @@ router.post('/update/:id', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
-//Create user
 router.post('/create', async (req, res) => {
   try {
     const { name, email, password, phone, course } = req.body;

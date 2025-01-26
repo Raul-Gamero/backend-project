@@ -8,7 +8,7 @@
 
 <h1>Management</h1>
 
-<!-- Add a form to create a new user -->
+
 <button onclick="document.getElementById('create-form').style.display='block'" class="create-button">Create New User</button>
 <form id="create-form" action="/admin/create" method="POST" style="display:none;">
     <input type="text" name="name" placeholder="Name" required>
@@ -26,11 +26,9 @@
         <p><strong>Email:</strong> {{this.email}}</p>
         <p><strong>Phone:</strong> {{this.phone}}</p>
         <p><strong>Course:</strong> {{this.course}}</p>
-        <!-- Add a form to delete the user -->
         <form action="/admin/delete/{{this.id}}" method="POST" style="display:inline;">
             <button type="submit" class="delete-button">Delete</button>
         </form>
-        <!-- Add a form to update the user -->
         <button onclick="document.getElementById('update-form-{{this.id}}').style.display='block'" class="update-button">Update</button>
         <form id="update-form-{{this.id}}" action="/admin/update/{{this.id}}" method="POST" style="display:none;">
             <input type="text" name="name" placeholder="Name" value="{{this.name}}" required>

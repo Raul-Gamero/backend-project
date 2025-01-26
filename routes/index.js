@@ -16,6 +16,16 @@ router.get('/profile', (req, res) => {
 
   res.render('profile', { email, name, phone, course });
 })
+
+router.get('/courses', (req, res) => {
+  const { email } = req.user;
+  const { name } = req.user;
+  const { phone } = req.user;
+  const { course } = req.user;
+
+  res.render('courses', { email, name, phone, course });
+})
+
 //test the middleware
 router.get('/*', isAuthenticated, function (req, res) {
   console.log(req.session)

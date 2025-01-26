@@ -267,7 +267,7 @@ form input[type="email"] {
 /* ADMINCOURSES-HBS */
 /* Create Button Styles */
 .create-button {
-  background-color: #008CBA;
+  background-color: #e716cb;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -281,7 +281,7 @@ form input[type="email"] {
 }
 
 .create-button:hover {
-  background-color: #007bb5;
+  background-color: #b5007f;
 }
 
 /* Save Button Styles */
@@ -300,7 +300,7 @@ form input[type="email"] {
 }
 
 .save-button:hover {
-  background-color: #45a049;
+  background-color: #f54c09;
 }
 
 /* Input Field Styles */

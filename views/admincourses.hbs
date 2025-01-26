@@ -9,10 +9,8 @@
 
 <h1>Management Courses</h1>
 
-<!-- Add a button to open the form for creating a new course -->
-<button onclick="document.getElementById('create-course-form').style.display='block'" class="create-button">Create New Course</button>
 
-<!-- Create Course Form -->
+<button onclick="document.getElementById('create-course-form').style.display='block'" class="create-button">Create New Course</button>
 <form id="create-course-form" action="/admincourses/create" method="POST" style="display:none;">
     <input type="text" name="title" placeholder="Course Title" required>
     <input type="text" name="description" placeholder="Course Description" required>

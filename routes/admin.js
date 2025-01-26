@@ -4,8 +4,13 @@ const router = express.Router();
 const prisma = require("../prisma");
 
 router.get('/', async (req, res) => {
-  const users = await prisma.user.findMany();
-  res.render('admin', { users });
+  try {
+    const users = await prisma.user.findMany();
+    res.render('admin', { users });
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 router.get('/admincourses', async (req, res) => {

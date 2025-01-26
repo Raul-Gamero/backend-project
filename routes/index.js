@@ -17,14 +17,10 @@ router.get('/profile', (req, res) => {
   res.render('profile', { email, name, phone, course });
 })
 
-router.get('/usercourses', (req, res) => {
-  const { email } = req.user;
-  const { name } = req.user;
-  const { phone } = req.user;
-  const { course } = req.user;
-
-  res.render('usercourses', { email, name, phone, course });
-})
+router.get('/usercourses', async (req, res) => {
+  const courses = await prisma.course.findMany();
+  res.render('usercourses', { courses });
+});
 
 //test the middleware
 router.get('/*', isAuthenticated, function (req, res) {

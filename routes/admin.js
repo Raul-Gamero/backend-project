@@ -9,8 +9,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/admincourses', async (req, res) => {
-  const users = await prisma.user.findMany();
-  res.render('admincourses', { users });
+  const courses = await prisma.course.findMany();
+  res.render('admincourses', { courses });
 });
 
 

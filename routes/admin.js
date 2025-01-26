@@ -9,8 +9,26 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/admincourses', async (req, res) => {
-  const courses = await prisma.course.findMany();
-  res.render('admincourses', { courses });
+  try {
+    const courses = await prisma.course.findMany();
+    res.render('admincourses', { courses });
+  } catch (error) {
+    console.error('Error fetching courses:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+router.post('/admincourses/create', async (req, res) => {
+  try {
+    const { title, description } = req.body;
+    await prisma.course.create({
+      data: { title, description },
+    });
+    res.redirect('/admincourses');
+  } catch (error) {
+    console.error('Error creating course:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 

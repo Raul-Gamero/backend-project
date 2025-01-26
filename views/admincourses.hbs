@@ -7,43 +7,26 @@
     </ul>
 </nav>
 
-<h1>Management</h1>
+<h1>Management Courses</h1>
 
+<!-- Add a button to open the form for creating a new course -->
+<button onclick="document.getElementById('create-course-form').style.display='block'" class="create-button">Create New Course</button>
 
-<button onclick="document.getElementById('create-form').style.display='block'" class="create-button">Create New User</button>
-<form id="create-form" action="/admin/create" method="POST" style="display:none;">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="text" name="phone" placeholder="Phone" required>
-    <input type="text" name="course" placeholder="Course" required>
+<!-- Create Course Form -->
+<form id="create-course-form" action="/admincourses/create" method="POST" style="display:none;">
+    <input type="text" name="title" placeholder="Course Title" required>
+    <input type="text" name="description" placeholder="Course Description" required>
     <button type="submit" class="save-button">Save</button>
 </form>
 
-<div class="users-information">
-    {{#each users}}
-    <div class="user">
-        <p><strong>Name:</strong> {{this.name}}</p>
-        <p><strong>Email:</strong> {{this.email}}</p>
-        <p><strong>Phone:</strong> {{this.phone}}</p>
-        <p><strong>Course:</strong> {{this.course}}</p>
-        <form action="/admin/delete/{{this.id}}" method="POST" style="display:inline;">
-            <button type="submit" class="delete-button">Delete</button>
-        </form>
-        <button onclick="document.getElementById('update-form-{{this.id}}').style.display='block'" class="update-button">Update</button>
-        <form id="update-form-{{this.id}}" action="/admin/update/{{this.id}}" method="POST" style="display:none;">
-            <input type="text" name="name" placeholder="Name" value="{{this.name}}" required>
-            <input type="email" name="email" placeholder="Email" value="{{this.email}}" required>
-            <input type="text" name="phone" placeholder="Phone" value="{{this.phone}}" required>
-            <input type="text" name="course" placeholder="Course" value="{{this.course}}" required>
-            <button type="submit" class="save-button">Save</button>
-        </form>
+<div class="courses-information">
+    {{#each courses}}
+    <div class="course">
+        <p><strong>Title:</strong> {{this.title}}</p>
+        <p><strong>Description:</strong> {{this.description}}</p>
     </div>
     {{/each}}
 </div>
-        
-    
-
 
 <section class="index-unique-features">
     <h2 class="index-features-title">What Makes Us Stand Out</h2>

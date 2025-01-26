@@ -262,3 +262,53 @@ form input[type="email"] {
   border-radius: 4px;
   width: calc(100% - 22px);
 }
+
+
+/* ADMINCOURSES-HBS */
+/* Create Button Styles */
+.create-button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.create-button:hover {
+  background-color: #007bb5;
+}
+
+/* Save Button Styles */
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+/* Input Field Styles */
+form input[type="text"] {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px);
+}
+/* ADMINCOURSES-HBS */

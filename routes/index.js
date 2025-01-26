@@ -18,8 +18,22 @@ router.get('/profile', (req, res) => {
 })
 
 router.get('/usercourses', async (req, res) => {
-  const courses = await prisma.course.findMany();
-  res.render('usercourses', { courses });
+  try {
+    const userEmail = req.user.email; // Assuming req.user contains the authenticated user's information
+    const user = await prisma.user.findUnique({
+      where: { email: userEmail },
+      include: { courses: true },
+    });
+
+    if (!user) {
+      return res.status(404).send('User not found');
+    }
+
+    res.render('usercourses', { courses: user.courses });
+  } catch (error) {
+    console.error('Error fetching user courses:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 //test the middleware

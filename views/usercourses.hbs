@@ -7,14 +7,16 @@
     </ul>
 </nav>
 
-<div class="profile-container">
-        <h2 class="profile-title">Profile Information</h2>
-        <div class="profile">
-            <p><strong>Name:</strong> {{ toUpperCase name }}</p>
-            <p><strong>Course:</strong> {{ toUpperCase course }}</p>
-            <p><strong>Email:</strong> {{ toUpperCase email }}</p>
-            <p><strong>Phone:</strong> {{ toUpperCase phone }}</p>
-        </div>
+
+<h1>Your Courses</h1>
+
+<div class="courses-information">
+    {{#each courses}}
+    <div class="course">
+        <p><strong>Title:</strong> {{this.title}}</p>
+        <p><strong>Description:</strong> {{this.description}}</p>
+    </div>
+    {{/each}}
 </div>
 
 

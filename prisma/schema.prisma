@@ -16,26 +16,34 @@ enum Role {
 }
 
 model User {
-  id String @id @default(uuid())
-  name String?
-  email String @unique
-  password String
-  phone String? 
-  course String?
-  courses   Course[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  role Role @default(USER)
+  id        String    @id @default(uuid())
+  name      String?
+  email     String    @unique
+  password  String
+  phone     String?
+  course    String?
+  courses   UserCourse[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  role      Role      @default(USER)
 }
 
 model Course {
-  id          String    @id @default(uuid())
+  id          String       @id @default(uuid())
   title       String
   description String
-  users       User[]    
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  userId      String
+  users       UserCourse[]
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model UserCourse {
+  userId   String
+  courseId String
+  user     User   @relation(fields: [userId], references: [id])
+  course   Course @relation(fields: [courseId], references: [id])
+
+  @@id([userId, courseId])
 }
 
 model Session {

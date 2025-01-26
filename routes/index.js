@@ -39,7 +39,7 @@ router.get('/usercourses', async (req, res) => {
 //test the middleware
 router.get('/*', isAuthenticated, function (req, res) {
   console.log(req.session)
-  res.render('index', { title: 'Unlock Your Future with French Voyage Akademie', user: req.user });
+  res.render('index', { title: 'French Voyage Akademie', user: req.user });
 });
 
 

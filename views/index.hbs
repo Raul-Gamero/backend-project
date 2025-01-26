@@ -3,9 +3,10 @@
         <li><a href="/">Home</a></li>
         {{#eq user.role 'ADMIN' }}
             <li><a href="/admin">Admin</a></li>
+            <li><a href="/admincourses">Courses</a></li>
         {{else}}
             <li><a href="/profile">Profile</a></li>
-            <li><a href="/courses">Courses</a></li>
+            <li><a href="/usercourses">Courses</a></li>
         {{/eq}}
         <li><a href="/auth/login-page">Logout</a></li>
     </ul>

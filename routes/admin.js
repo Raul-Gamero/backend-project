@@ -8,6 +8,11 @@ router.get('/', async (req, res) => {
   res.render('admin', { users });
 });
 
+router.get('/admincourses', async (req, res) => {
+  const users = await prisma.user.findMany();
+  res.render('admincourses', { users });
+});
+
 
 router.post('/delete/:id', async (req, res) => {
   try {

@@ -17,13 +17,13 @@ router.get('/profile', (req, res) => {
   res.render('profile', { email, name, phone, course });
 })
 
-router.get('/courses', (req, res) => {
+router.get('/usercourses', (req, res) => {
   const { email } = req.user;
   const { name } = req.user;
   const { phone } = req.user;
   const { course } = req.user;
 
-  res.render('courses', { email, name, phone, course });
+  res.render('usercourses', { email, name, phone, course });
 })
 
 //test the middleware

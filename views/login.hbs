@@ -1,84 +1,95 @@
-<h1 class="blue">Login</h1>
-<h1 class="blue">Admin: 1@gmail.com Password: 1234 </h1>
-<h1 class="blue">User: test@gmail.com Password: 1234 </h1>
-<form action="/auth/login" method="post">
-    <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit">Login</button>
-    {{#each errors}}
-        <p style="color:red">{{this}}</p>
-    {{/each}}
-</form>
-<p class="blue"><strong>Don't have an account?</strong><a href="/auth/register-page"><strong>Register here</strong></a></p>
-
-<div class="index-intro">
-    <p class="index-intro-text">Experience French Excellence Here</p>
-    <h1 class="index-title">{{title}}</h1>
-    <h2 class="index-discover red">Discover the Legacy of French Voyage Akademie</h2>
-    <p class="index-description">French Voyage Akademie is a leading online academy dedicated to teaching French for travel and career success.</p>
-    <p class="index-mission">Founded with a vision for cultural immersion, serving aspiring individuals globally.</p>
-</div>
-
-<div class="index-services">
-    <h2 class="index-services-title blue">Our Comprehensive Range of Services</h2>
-    <ul class="index-services-list">
-        <li class="index-service">
-            <strong>French Language Courses:</strong>
-            <ul class="index-service-details">
-                <li>Interactive Lessons</li>
-                <li>Virtual Reality Practice</li>
-                <li>Cultural Immersion Workshops</li>
-            </ul>
-        </li>
-        <li class="index-service">
-            <strong>Career Preparation:</strong>
-            <ul class="index-service-details">
-                <li>Business French Training</li>
-                <li>Professional Networking Sessions</li>
-                <li>CV and Interview Guidance</li>
-            </ul>
-        </li>
-        <li class="index-service">
-            <strong>Traveler’s Survival Kit:</strong>
-            <ul class="index-service-details">
-                <li>Travel Phrasebook</li>
-                <li>Local Etiquette Tips</li>
-                <li>Navigation and Transport Guidance</li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
-<section class="index-unique-features">
-    <h2 class="index-features-title">What Makes Us Stand Out</h2>
-    <div class="index-feature">
-        <div class="index-feature-number">01.</div>
-        <div class="index-feature-content">
-            <h3 class="index-feature-title">Interactive Virtual Lessons</h3>
-            <p>Engage in immersive learning with cutting-edge technology.</p>
-            <img src="/img/1.jpeg" alt="Interactive Virtual Lessons" class="index-feature-image" style="width: 300px; height: 260px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1 class="blue">Login</h1>
+    <h1 class="blue">Admin: 1@gmail.com Password: 1234 </h1>
+    <h1 class="blue">User: test@gmail.com Password: 1234 </h1>
+    <form action="/auth/login" method="post" class="login-form">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
         </div>
-    </div>
-    <div class="index-feature">
-        <div class="index-feature-number">02.</div>
-        <div class="index-feature-content">
-            <h3 class="index-feature-title">Expert Language Instructors</h3>
-            <p>Receive personalized guidance from seasoned language professionals.</p>
-            <img src="/img/2.jpeg" alt="Expert Language Instructors" class="index-feature-image" style="width: 300px; height: 260px;">
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
         </div>
+        <button type="submit" class="btn">Login</button>
+        {{#each errors}}
+            <p style="color:red">{{this}}</p>
+        {{/each}}
+    </form>
+    <p class="blue"><strong>Don't have an account?</strong><a href="/auth/register-page"><strong>Register here</strong></a></p>
+
+    <div class="index-intro">
+        <p class="index-intro-text">Experience French Excellence Here</p>
+        <h1 class="index-title">{{title}}</h1>
+        <h2 class="index-discover red">Discover the Legacy of French Voyage Akademie</h2>
+        <p class="index-description">French Voyage Akademie is a leading online academy dedicated to teaching French for travel and career success.</p>
+        <p class="index-mission">Founded with a vision for cultural immersion, serving aspiring individuals globally.</p>
     </div>
-    <div class="index-feature">
-        <div class="index-feature-number">03.</div>
-        <div class="index-feature-content">
-            <h3 class="index-feature-title">Cultural Enrichment Emphasis</h3>
-            <p>Experience French culture alongside language proficiency.</p>
-            <img src="/img/3.jpeg" alt="Cultural Enrichment" class="index-feature-image" style="width: 300px; height: 260px;">
+
+    <div class="index-services">
+        <h2 class="index-services-title blue">Our Comprehensive Range of Services</h2>
+        <ul class="index-services-list">
+            <li class="index-service">
+                <strong>French Language Courses:</strong>
+                <ul class="index-service-details">
+                    <li>Interactive Lessons</li>
+                    <li>Virtual Reality Practice</li>
+                    <li>Cultural Immersion Workshops</li>
+                </ul>
+            </li>
+            <li class="index-service">
+                <strong>Career Preparation:</strong>
+                <ul class="index-service-details">
+                    <li>Business French Training</li>
+                    <li>Professional Networking Sessions</li>
+                    <li>CV and Interview Guidance</li>
+                </ul>
+            </li>
+            <li class="index-service">
+                <strong>Traveler’s Survival Kit:</strong>
+                <ul class="index-service-details">
+                    <li>Travel Phrasebook</li>
+                    <li>Local Etiquette Tips</li>
+                    <li>Navigation and Transport Guidance</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <section class="index-unique-features">
+        <h2 class="index-features-title">What Makes Us Stand Out</h2>
+        <div class="index-feature">
+            <div class="index-feature-number">01.</div>
+            <div class="index-feature-content">
+                <h3 class="index-feature-title">Interactive Virtual Lessons</h3>
+                <p>Engage in immersive learning with cutting-edge technology.</p>
+                <img src="/img/1.jpeg" alt="Interactive Virtual Lessons" class="index-feature-image" style="width: 300px; height: 260px;">
+            </div>
         </div>
-    </div>
-</section>
+        <div class="index-feature">
+            <div class="index-feature-number">02.</div>
+            <div class="index-feature-content">
+                <h3 class="index-feature-title">Expert Language Instructors</h3>
+                <p>Receive personalized guidance from seasoned language professionals.</p>
+                <img src="/img/2.jpeg" alt="Expert Language Instructors" class="index-feature-image" style="width: 300px; height: 260px;">
+            </div>
+        </div>
+        <div class="index-feature">
+            <div class="index-feature-number">03.</div>
+            <div class="index-feature-content">
+                <h3 class="index-feature-title">Cultural Enrichment Emphasis</h3>
+                <p>Experience French culture alongside language proficiency.</p>
+                <img src="/img/3.jpeg" alt="Cultural Enrichment" class="index-feature-image" style="width: 300px; height: 260px;">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,18 +1,18 @@
+/* General Styles */
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /*background start*/
   background-image: url('../img/1.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
-  /*background end*/ 
 }
 
 a {
   color: #1aade7;
 }
-/*INDEX-HBS*/
+
+/* Navbar Styles */
 .index-navbar {
   background-color: #2c3e50;
   padding: 10px 20px;
@@ -43,6 +43,7 @@ a {
   transition: color 0.3s ease;
 }
 
+/* Intro and Services Styles */
 .index-intro-text, .index-title, .index-discover, .index-description, .index-mission {
   text-align: center;
   color: #3d0842;
@@ -77,6 +78,7 @@ a {
   margin-left: 20px;
 }
 
+/* Unique Features Styles */
 .index-unique-features {
   text-align: center;
   padding: 20px;
@@ -103,20 +105,105 @@ a {
   display: block;
   margin: 10px auto;
 }
-/*INDEX-HBS*/
 
-/*Register-HBS & Login-HBS*/
-label {
-  color: blue;
+/* Form Styles */
+.login-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.blue {
-  color: blue;
+.form-group {
+  margin-bottom: 15px;
 }
-/*Register-HBS*/
 
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
 
-/*PROFILE-HBS*/
+.form-group input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+.btn, .create-button, .save-button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover, .create-button:hover, .save-button:hover {
+  background-color: #007bb5;
+}
+
+/* Additional Styles */
+.index-intro, .index-services, .index-unique-features {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.index-services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.index-service {
+  margin-bottom: 20px;
+}
+
+.index-service-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.index-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.index-feature-number {
+  font-size: 36px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.index-feature-content {
+  flex: 1;
+}
+
+.index-feature-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.index-feature-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
 /* Profile Container Styles */
 .profile-container {
   max-width: 800px;
@@ -139,10 +226,7 @@ label {
   font-size: 18px;
   margin: 10px 0;
 }
-/*PROFILE-HBS*/
 
-
-/*ADMIN-HBS*/
 /* Users Information Container Styles */
 .users-information {
   max-width: 1000px;
@@ -164,8 +248,6 @@ label {
   font-size: 18px;
   margin: 5px 0;
 }
-/*ADMIN-HBS*/
-
 
 /* Update Button Styles */
 .update-button {
@@ -207,7 +289,8 @@ label {
 
 /* Input Field Styles */
 form input[type="text"],
-form input[type="email"] {
+form input[type="email"],
+form input[type="password"] {
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;
@@ -215,56 +298,6 @@ form input[type="email"] {
   width: calc(100% - 22px);
 }
 
-/* Create Button Styles */
-.create-button {
-  background-color: #008CBA;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.create-button:hover {
-  background-color: #007bb5;
-}
-
-/* Save Button Styles */
-.save-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.save-button:hover {
-  background-color: #45a049;
-}
-
-/* Input Field Styles */
-form input[type="text"],
-form input[type="email"] {
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: calc(100% - 22px);
-}
-
-
-/* ADMINCOURSES-HBS */
 /* Create Button Styles */
 .create-button {
   background-color: #e716cb;
@@ -283,32 +316,3 @@ form input[type="email"] {
 .create-button:hover {
   background-color: #b5007f;
 }
-
-/* Save Button Styles */
-.save-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 0;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.save-button:hover {
-  background-color: #f54c09;
-}
-
-/* Input Field Styles */
-form input[type="text"] {
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: calc(100% - 22px);
-}
-/* ADMINCOURSES-HBS */

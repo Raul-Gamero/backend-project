@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-//importing prisma
-const prisma = require("../prisma");
+const { PrismaClient } = require('@prisma/client');
+const bcrypt = require('bcrypt');
+const prisma = new PrismaClient();
 
 router.get('/', async (req, res) => {
   try {
@@ -12,30 +13,6 @@ router.get('/', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
-router.get('/admincourses', async (req, res) => {
-  try {
-    const courses = await prisma.course.findMany();
-    res.render('admincourses', { courses });
-  } catch (error) {
-    console.error('Error fetching courses:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-router.post('/admincourses/create', async (req, res) => {
-  try {
-    const { title, description } = req.body;
-    await prisma.course.create({
-      data: { title, description },
-    });
-    res.redirect('/admincourses');
-  } catch (error) {
-    console.error('Error creating course:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
 
 router.post('/delete/:id', async (req, res) => {
   try {
@@ -49,6 +26,7 @@ router.post('/delete/:id', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
 router.post('/update/:id', async (req, res) => {
   try {
     const userId = req.params.id;
@@ -63,9 +41,11 @@ router.post('/update/:id', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
 router.post('/create', async (req, res) => {
   try {
     const { name, email, password, phone, course } = req.body;
+    console.log('Creating user with data:', { name, email, password, phone, course }); // Log input data
     const hashedPassword = await bcrypt.hash(password, 10);
     await prisma.user.create({
       data: { name, email, password: hashedPassword, phone, course },
@@ -76,7 +56,5 @@ router.post('/create', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
-
 
 module.exports = router;

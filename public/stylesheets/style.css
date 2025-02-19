@@ -287,6 +287,25 @@ a {
   background-color: #007bb5;
 }
 
+/* Delete Button Styles */
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+}
+
 /* Input Field Styles */
 form input[type="text"],
 form input[type="email"],

@@ -46,6 +46,16 @@ router.post('/create', async (req, res) => {
   try {
     const { name, email, password, phone, course } = req.body;
     console.log('Creating user with data:', { name, email, password, phone, course }); // Log input data
+
+    // Check if a user with the same email already exists
+    const existingUser = await prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (existingUser) {
+      return res.status(400).send('A user with this email already exists.');
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
     await prisma.user.create({
       data: { name, email, password: hashedPassword, phone, course },

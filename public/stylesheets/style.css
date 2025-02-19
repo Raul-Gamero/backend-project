@@ -107,7 +107,7 @@ a {
 }
 
 /* Form Styles */
-.login-form {
+.login-form, .register-form {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
@@ -125,7 +125,7 @@ a {
   margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group input, .form-group select {
   width: calc(100% - 22px);
   padding: 10px;
   border: 1px solid #ccc;
